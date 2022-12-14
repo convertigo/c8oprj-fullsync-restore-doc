@@ -1,0 +1,19 @@
+accessibility: Private
+↓Init [steps.SimpleStep-1671028096006]: 
+  expression: |
+    'var toJSON = function(json) {
+    	return JSON.parse(json.toString());
+    }
+    
+    var fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    var query = new java.util.HashMap();
+    
+    query.put("rev", "" + rev);
+    let json = toJSON(fsclient.copyDocument(db, docid, docid, oldrev, query));'
+↓json [steps.ElementStep-1671028135689]: 
+  expression: JSON.stringify(json, null, 2)
+  nodeName: json
+↓docid [variables.RequestableVariable-1671027837198]: 
+↓db [variables.RequestableVariable-1671027837201]: 
+↓rev [variables.RequestableVariable-1671027837204]: 
+↓oldrev [variables.RequestableVariable-1671028535506]: 

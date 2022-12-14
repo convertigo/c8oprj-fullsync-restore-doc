@@ -1,0 +1,17 @@
+accessibility: Private
+↓Init [steps.SimpleStep-1670951834710]: 
+  expression: |
+    'var toJSON = function(json) {
+    	return JSON.parse(json.toString());
+    }
+    
+    var toJettison = function(json) {
+    	var txt = (typeof json == "string") ? json : JSON.stringify(json);
+    	return txt.startsWith("{") ? new org.codehaus.jettison.json.JSONObject(txt) : new org.codehaus.jettison.json.JSONArray(txt);
+    }
+    
+    var fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    var json = toJSON(fsclient.postCompact(db));
+    
+    context.addTextNodeUnderRoot("json", JSON.stringify(json));'
+↓db [variables.RequestableVariable-1670951830939]: 

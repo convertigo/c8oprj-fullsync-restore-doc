@@ -1,0 +1,11 @@
+↓key [mobile.components.UIStackVariable-1671009168382]: 
+↓value [mobile.components.UIStackVariable-1671009172873]: 
+↓SetLocalStorage [mobile.components.UICustomAction-1671009191275]: 
+  actionValue: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          		window.localStorage[vars.key] = vars.value;
+          		resolve();
+          

@@ -1,0 +1,126 @@
+accessibility: Private
+↓Init [steps.SimpleStep-1670918024629]: 
+  expression: |
+    'var toJSON = function(json) {
+    	return JSON.parse(json.toString());
+    }
+    
+    var toJettison = function(json) {
+    	var txt = (typeof json == "string") ? json : JSON.stringify(json);
+    	return txt.startsWith("{") ? new org.codehaus.jettison.json.JSONObject(txt) : new org.codehaus.jettison.json.JSONArray(txt);
+    }
+    
+    var fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    var query = new java.util.HashMap();
+    
+    query.put("revs", "true");
+    query.put("open_revs", "all");
+    
+    let win = toJSON(fsclient.getDocument(db, docid));
+    let json = toJSON(fsclient.getDocument(db, docid, query));
+    let cache = {};
+    
+    let branchs = json.items.length;
+    let latest = json.items.map(i => i.ok._revisions.start).reduce((acc, val) => Math.max(acc, val));
+    let levels = new Array(latest).fill(0).map(_ => new Array(branchs).fill({rev: "", state: ""}));
+    json.items.forEach((it, br) => {
+    	let lvl = latest - it.ok._revisions.start;
+    	br = branchs - 1 - br;
+    	let meta = {
+    		rev: it.ok._rev,
+    		state: it.ok._deleted == true ? "deleted" : "ok"
+    	};
+    	if (it.ok._rev == win._rev) {
+    		meta.state += "-win";
+    	}
+    	cache[meta.rev] = meta;
+    	it.ok._revisions.ids.forEach((r, i) => {
+    		let rev = (it.ok._revisions.start - i) + "-" + r;
+    		let missing = false;
+    		if (rev in cache) {
+    			levels[i + lvl][br] = cache[rev];
+    		} else {
+    			query.clear();
+    			query.put("rev", rev);
+    			let j = missing ? null : toJSON(fsclient.getDocument(db, docid, query));
+    			levels[i + lvl][br] = cache[rev] = {
+    				rev: rev,
+    				state: (missing = !missing && j._c8oMeta.statusCode == 404) ? "missing" : j._deleted == true ? "deleted" : "ok",
+    			};
+    		}
+    	});
+    });
+    
+    levels[0].map((_, i) => {
+    	let meta = levels.map(r => r[i]).find(m => m.state != "");
+    	if (''state'' in meta && meta.state.startsWith("ok")) {
+    		meta.delete = true;
+    	}
+    });
+    
+    if (hideDeadBranches == "true") {
+    	let toDelete = [];
+    	levels[0].map((_, i) => {
+    		let meta = levels.map(r => r[i]).find(m => m.state.startsWith("ok"));
+    		if (!meta) {
+    			toDelete.push(i);
+    		}
+    	});
+    	toDelete.reverse().forEach(i => levels.forEach(r => r.splice(i, 1)));
+    }
+    
+    if (hideForgotten == "true") {
+    	let id = levels.findIndex(r => -1 == r.findIndex(m => m.state != "missing"));
+    	if (id != -1) {
+    		levels.splice(id, levels.length - id);
+    	}
+    }'
+↓levels [steps.XMLComplexStep-1670948272009]: 
+  nodeName: levels
+  ↓Attribute [steps.XMLAttributeStep-1670948663519]: 
+    nodeName: type
+    nodeText: array
+  ↓jIterator [steps.SimpleIteratorStep-1670948213522]: 
+    expression: levels
+    ↓levels [steps.XMLComplexStep-1670948252266]: 
+      nodeName: level
+      ↓Attribute [steps.XMLAttributeStep-1670948667421]: 
+        nodeName: type
+        nodeText: array
+      ↓jIterator [steps.SimpleIteratorStep-1670948229236]: 
+        expression: item
+        ↓meta [steps.XMLComplexStep-1670949578642]: 
+          nodeName: meta
+          ↓Attribute [steps.XMLAttributeStep-1670949599532]: 
+            nodeName: type
+            nodeText: object
+          ↓rev [steps.ElementStep-1670948330306]: 
+            expression: '"" + item.rev'
+            nodeName: rev
+            ↓Attribute [steps.XMLAttributeStep-1670948670603]: 
+              nodeName: type
+              nodeText: string
+          ↓state [steps.ElementStep-1670949614684]: 
+            expression: '"" + item.state'
+            nodeName: state
+            ↓Attribute [steps.XMLAttributeStep-1670949614687]: 
+              nodeName: type
+              nodeText: string
+          ↓delete [steps.ElementStep-1671034883448]: 
+            expression: '''delete'' in item ? item.delete : false'
+            nodeName: delete
+            ↓Attribute [steps.XMLAttributeStep-1671034883451]: 
+              nodeName: type
+              nodeText: boolean
+↓rev [steps.ElementStep-1671028751291]: 
+  expression: win._rev
+  nodeName: rev
+↓json [steps.ElementStep-1671028742012]: 
+  expression: JSON.stringify(win, null, 2)
+  nodeName: json
+↓docid [variables.RequestableVariable-1670918096125]: 
+↓db [variables.RequestableVariable-1670941431769]: 
+↓hideDeadBranches [variables.RequestableVariable-1671035112029]: 
+  value: false
+↓hideForgotten [variables.RequestableVariable-1671035133964]: 
+  value: false

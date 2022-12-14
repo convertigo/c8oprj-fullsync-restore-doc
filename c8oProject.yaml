@@ -1,0 +1,18 @@
+↑convertigo: 7.9.0.m006
+↓FullsyncRestoreDoc [core.Project]: 
+  comment: Convertigo Mobile builder Project
+  corsOrigin: =Origin
+  version: 7.9.0.0
+  ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
+  ↓Compact [sequences.GenericSequence]: 🗏 sequences/Compact.yaml
+  ↓DeleteDoc [sequences.GenericSequence]: 🗏 sequences/DeleteDoc.yaml
+  ↓GetDoc [sequences.GenericSequence]: 🗏 sequences/GetDoc.yaml
+  ↓GetRevs [sequences.GenericSequence]: 🗏 sequences/GetRevs.yaml
+  ↓RestoreDoc [sequences.GenericSequence]: 🗏 sequences/RestoreDoc.yaml
+  ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
+    comment: mobile builder template
+    projectName: mobilebuilder_tpl_7_9_0=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_7_9_0.zip
+  ↓MobileApplication [core.MobileApplication]: 
+    comment: Describes the mobile application global properties
+    splashRemoveMode: beforeUpdate
+    ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml

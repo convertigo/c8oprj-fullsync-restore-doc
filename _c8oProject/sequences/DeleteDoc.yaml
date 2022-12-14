@@ -1,0 +1,16 @@
+accessibility: Private
+↓Init [steps.SimpleStep-1671032306861]: 
+  expression: |
+    'var toJSON = function(json) {
+    	return JSON.parse(json.toString());
+    }
+    
+    var fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    let json = toJSON(fsclient.deleteDocument(db, docid, rev));'
+↓json [steps.ElementStep-1671032306864]: 
+  expression: JSON.stringify(json, null, 2)
+  nodeName: json
+↓docid [variables.RequestableVariable-1671032306867]: 
+↓db [variables.RequestableVariable-1671032306870]: 
+↓rev [variables.RequestableVariable-1671032306873]: 
+↓oldrev [variables.RequestableVariable-1671032306876]: 

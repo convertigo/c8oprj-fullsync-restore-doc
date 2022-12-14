@@ -1,0 +1,578 @@
+↑isRoot: true
+comment: My First Page as root page
+preloadPriority: high
+scriptContent: 
+  - xmlizable: 
+    - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+    - com.twinsoft.convertigo.beans.common.FormatedContent: 
+      →: |
+        /*Begin_c8o_PageImport*/
+        /*End_c8o_PageImport*/
+        /*Begin_c8o_PageDeclaration*/
+        	/*End_c8o_PageDeclaration*/
+        /*Begin_c8o_PageConstructor*/
+        		/*End_c8o_PageConstructor*/
+        /*Begin_c8o_PageFunction*/
+        	/*End_c8o_PageFunction*/
+        
+segment: path-to-page
+title: First page
+↓Header [mobile.components.UIDynamicElement-1491634212350]: 
+  beanData: '{"ionBean":"Header"}'
+  comment: Page header
+  tagName: ion-header
+  ↓NavBar [mobile.components.UIDynamicElement-1491634231108]: 
+    beanData: '{"ionBean":"NavBar"}'
+    tagName: ion-navbar
+    ↓BarTitle [mobile.components.UIDynamicElement-1491634265317]: 
+      beanData: '{"ionBean":"BarTitle"}'
+      tagName: ion-title
+      ↓Text [mobile.components.UIText-1491634275121]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:Fullsync Restore Doc
+    ↓Button [mobile.components.UIDynamicElement-1491634442029]: 
+      beanData: '{"ionBean":"Button","MenuMode":"plain:menuToggle"}'
+      comment: A button to toggle the menu
+      tagName: button
+      ↓Icon [mobile.components.UIDynamicElement-1491634475867]: 
+        beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
+        tagName: ion-icon
+    ↓ButtonSet [mobile.components.UIDynamicElement-1491634611427]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634621907]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Icon [mobile.components.UIDynamicElement-1491634637555]: 
+          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
+          tagName: ion-icon
+↓Content [mobile.components.UIDynamicElement-1489674805352]: 
+  beanData: '{"ionBean":"Content"}'
+  comment: Page content
+  tagName: ion-content
+  ↓CardContainer [mobile.components.UIDynamicElement-1671007912773]: 
+    beanData: '{"ionBean":"Card"}'
+    tagName: ion-card
+    ↓CardContent [mobile.components.UIDynamicElement-1671007925125]: 
+      beanData: '{"ionBean":"CardContent"}'
+      tagName: ion-card-content
+      ↓Form [mobile.components.UIForm-1671008019737]: 
+        ↓FormItem [mobile.components.UIDynamicElement-1671008024889]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [mobile.components.UIDynamicElement-1671008045354]: 
+            beanData: '{"ionBean":"Label"}'
+            tagName: ion-label
+            ↓Text [mobile.components.UIText-1671008057086]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Database :
+          ↓TextInput [mobile.components.UIDynamicElement-1671008003773]: 
+            beanData: |
+              '{
+               "ionBean": "Input",
+               "FormControlName": "plain:database",
+               "Value": "script:window.localStorage.database"
+              }'
+            tagName: ion-input
+            ↓Event [mobile.components.UIControlEvent-1671009108757]: 
+              attrName: (keyup)
+              eventName: (keyup)
+              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671009234569]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                ↓key [mobile.components.UIControlVariable-1671009240515]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:database
+                ↓value [mobile.components.UIControlVariable-1671009240517]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['database']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓Refresh [mobile.components.UIDynamicAction-1671038224740]: 
+                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+        ↓FormItem1 [mobile.components.UIDynamicElement-1671008664064]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [mobile.components.UIDynamicElement-1671008664067]: 
+            beanData: '{"ionBean":"Label"}'
+            tagName: ion-label
+            ↓Text [mobile.components.UIText-1671008664070]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:Doc id :
+          ↓TextInput [mobile.components.UIDynamicElement-1671008664073]: 
+            beanData: |
+              '{
+               "ionBean": "Input",
+               "FormControlName": "plain:docid",
+               "Value": "script:window.localStorage.docid"
+              }'
+            tagName: ion-input
+            ↓Event [mobile.components.UIControlEvent-1671012374208]: 
+              attrName: (keyup)
+              eventName: (keyup)
+              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671012374211]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                ↓key [mobile.components.UIControlVariable-1671012374214]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:docid
+                ↓value [mobile.components.UIControlVariable-1671012374217]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['docid']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓Refresh [mobile.components.UIDynamicAction-1671038230461]: 
+                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+        ↓FormItem2 [mobile.components.UIDynamicElement-1671034987699]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [mobile.components.UIDynamicElement-1671035044444]: 
+            beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
+            tagName: ion-label
+            ↓Text [mobile.components.UIText-1671035052342]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:hide dead branches
+          ↓CheckBox [mobile.components.UIDynamicElement-1671035034612]: 
+            beanData: |
+              '{
+               "ionBean": "CheckBox",
+               "FormControlName": "plain:hideDeadBranches",
+               "Checked": "script:window.localStorage.hideDeadBranches == true"
+              }'
+            tagName: ion-checkbox
+            ↓Event [mobile.components.UIControlEvent-1671035398276]: 
+              attrName: (ionChange)
+              eventName: ionChange
+              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671035398279]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                ↓key [mobile.components.UIControlVariable-1671035398282]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:hideDeadBranches
+                ↓value [mobile.components.UIControlVariable-1671035398285]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['hideDeadBranches']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓Refresh [mobile.components.UIDynamicAction-1671038239037]: 
+                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+        ↓FormItem3 [mobile.components.UIDynamicElement-1671035290903]: 
+          beanData: '{"ionBean":"FormItem"}'
+          tagName: ion-item
+          ↓Label [mobile.components.UIDynamicElement-1671035290906]: 
+            beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
+            tagName: ion-label
+            ↓Text [mobile.components.UIText-1671035290909]: 
+              textValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:hide forgotten revisions
+          ↓CheckBox [mobile.components.UIDynamicElement-1671035290912]: 
+            beanData: |
+              '{
+               "ionBean": "CheckBox",
+               "FormControlName": "plain:hideForgotten",
+               "Checked": "script:window.localStorage.hideForgotten == true"
+              }'
+            tagName: ion-checkbox
+            ↓Event [mobile.components.UIControlEvent-1671035970844]: 
+              attrName: (ionChange)
+              eventName: ionChange
+              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671035970847]: 
+                beanData: '{"ionBean":"InvokeAction"}'
+                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                ↓key [mobile.components.UIControlVariable-1671035970850]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: plain:hideForgotten
+                ↓value [mobile.components.UIControlVariable-1671035970853]: 
+                  varValue: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['hideForgotten']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                ↓Refresh [mobile.components.UIDynamicAction-1671038244361]: 
+                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+  ↓Grid [mobile.components.UIDynamicElement-1670948693955]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓Directive [mobile.components.UIControlDirective-1670948720797]: 
+      directiveSource: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: source:{"filter":"Sequence","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sequence":"FullsyncRestoreDoc.GetRevs","marker":""}],"path":"?.levels","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓GridRow [mobile.components.UIDynamicElement-1670948758833]: 
+        beanData: '{"ionBean":"GridRow"}'
+        tagName: ion-row
+        ↓Directive [mobile.components.UIControlDirective-1670948804598]: 
+          directiveSource: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: source:{"filter":"Iteration","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1670948720797}],"path":"","prefix":"","suffix":"","custom":"","useCustom":false}}
+          ↓GridCol [mobile.components.UIDynamicElement-1670948875687]: 
+            beanData: '{"ionBean":"GridCol"}'
+            tagName: ion-col
+            ↓Span [mobile.components.UIDynamicElement-1671014261648]: 
+              beanData: '{"ionBean":"SpanTag"}'
+              tagName: span
+              ↓Text [mobile.components.UIText-1671014267724]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: source:{"filter":"Iteration","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1670948804598},{"priority":1670948720797}],"path":"","prefix":"","suffix":".rev","custom":"","useCustom":false}}
+            ↓Attr [mobile.components.UIAttribute-1671014586959]: 
+              attrName: '[ngClass]'
+              attrValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: source:{"filter":"Iteration","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1670948804598},{"priority":1670948720797}],"path":"","prefix":"'state-' +","suffix":".state +' rev'","custom":"","useCustom":false}}
+            ↓Event [mobile.components.UIControlEvent-1671023732390]: 
+              ↓If [mobile.components.UIDynamicAction-1671024579418]: 
+                beanData: '{"ionBean":"IfAction","condition":"source:{\"filter\":\"Iteration\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1670948804598},{\"priority\":1670948720797}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".state == ''ok''\",\"custom\":\"\",\"useCustom\":false}}"}'
+                ↓CallSequence [mobile.components.UIDynamicAction-1671024669844]: 
+                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetDoc"}'
+                  ↓docid [mobile.components.UIControlVariable-1671024673032]: 
+                    comment: new variable
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:window.localStorage.docid
+                  ↓db [mobile.components.UIControlVariable-1671024673034]: 
+                    comment: new variable
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:window.localStorage.database
+                  ↓rev [mobile.components.UIControlVariable-1671024673036]: 
+                    comment: new variable
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: source:{"filter":"Iteration","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1670948804598},{"priority":1670948720797}],"path":"","prefix":"","suffix":".rev","custom":"","useCustom":false}}
+                  ↓SetGlobal [mobile.components.UIDynamicAction-1671031403958]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetGlobalAction",
+                       "Property": "plain:currentDoc",
+                       "Value": "script:out"
+                      }'
+                ↓SetGlobal [mobile.components.UIDynamicAction-1671031427435]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetGlobalAction",
+                     "Property": "plain:deleteDoc",
+                     "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1670948804598},{\"priority\":1670948720797}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".rev\",\"custom\":\"\",\"useCustom\":false}}"
+                    }'
+              ↓If1 [mobile.components.UIDynamicAction-1671031512927]: 
+                beanData: '{"ionBean":"IfAction","condition":"source:{\"filter\":\"Iteration\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1670948804598},{\"priority\":1670948720797}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".state == ''ok-win''\",\"custom\":\"\",\"useCustom\":false}}"}'
+                ↓SetGlobal [mobile.components.UIDynamicAction-1671031512945]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetGlobalAction",
+                     "Property": "plain:deleteDoc",
+                     "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1670948804598},{\"priority\":1670948720797}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".rev\",\"custom\":\"\",\"useCustom\":false}}"
+                    }'
+                ↓SetGlobal1 [mobile.components.UIDynamicAction-1671032069201]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetGlobalAction",
+                     "Property": "plain:currentDoc",
+                     "Value": "script:null"
+                    }'
+              ↓IfElse [mobile.components.UIDynamicIf-1671034718635]: 
+                beanData: '{"ionBean":"IfElseAction","condition":"source:{\"filter\":\"Iteration\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1670948804598},{\"priority\":1670948720797}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\"?.delete\",\"custom\":\"\",\"useCustom\":false}}"}'
+                ↓SetGlobal [mobile.components.UIDynamicAction-1671034608308]: 
+                  beanData: |
+                    '{
+                     "ionBean": "SetGlobalAction",
+                     "Property": "plain:deleteDoc",
+                     "Value": "source:{\"filter\":\"Iteration\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"priority\":1670948804598},{\"priority\":1670948720797}],\"path\":\"\",\"prefix\":\"\",\"suffix\":\".rev\",\"custom\":\"\",\"useCustom\":false}}"
+                    }'
+                ↓Else_Handler [mobile.components.UIActionElseEvent-1671034730222]: 
+                  ↓SetGlobal [mobile.components.UIDynamicAction-1671034654057]: 
+                    beanData: |
+                      '{
+                       "ionBean": "SetGlobalAction",
+                       "Property": "plain:deleteDoc",
+                       "Value": "script:null"
+                      }'
+  ↓Directive [mobile.components.UIControlDirective-1671025178435]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.currentDoc","prefix":"","suffix":"?.rev","custom":"","useCustom":false}}
+    ↓Button [mobile.components.UIDynamicElement-1671025247072]: 
+      beanData: '{"ionBean":"Button","IonShape":"plain:full"}'
+      tagName: button
+      ↓Text [mobile.components.UIText-1671025394008]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:restore 
+      ↓Text1 [mobile.components.UIText-1671025414776]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.currentDoc","prefix":"","suffix":"?.rev","custom":"","useCustom":false}}
+      ↓Event [mobile.components.UIControlEvent-1671027798644]: 
+        ↓CallSequence [mobile.components.UIDynamicAction-1671027886840]: 
+          beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.RestoreDoc"}'
+          ↓CallSequence [mobile.components.UIDynamicAction-1671027895888]: 
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
+            ↓docid [mobile.components.UIControlVariable-1671027895891]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:window.localStorage.docid
+            ↓db [mobile.components.UIControlVariable-1671027895894]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:window.localStorage.database
+            ↓SetGlobal [mobile.components.UIDynamicAction-1671031633985]: 
+              beanData: |
+                '{
+                 "ionBean": "SetGlobalAction",
+                 "Property": "plain:currentDoc",
+                 "Value": "script:null"
+                }'
+            ↓SetGlobal1 [mobile.components.UIDynamicAction-1671031657325]: 
+              beanData: |
+                '{
+                 "ionBean": "SetGlobalAction",
+                 "Property": "plain:deleteDoc",
+                 "Value": "script:null"
+                }'
+          ↓docid [mobile.components.UIControlVariable-1671027902696]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:window.localStorage.docid
+          ↓db [mobile.components.UIControlVariable-1671027902698]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:window.localStorage.database
+          ↓rev [mobile.components.UIControlVariable-1671027902700]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.currentDoc","prefix":"","suffix":"?.rev","custom":"","useCustom":false}}
+          ↓oldrev [mobile.components.UIControlVariable-1671028701767]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Sequence","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sequence":"FullsyncRestoreDoc.GetRevs","marker":""}],"path":"?.rev","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓Directive1 [mobile.components.UIControlDirective-1671032103027]: 
+    directiveName: If
+    directiveSource: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.deleteDoc","prefix":"","suffix":"!= null","custom":"","useCustom":false}}
+    ↓Button [mobile.components.UIDynamicElement-1671032103030]: 
+      beanData: '{"ionBean":"Button","IonShape":"plain:full"}'
+      tagName: button
+      ↓Text [mobile.components.UIText-1671032103033]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:delete
+      ↓Text1 [mobile.components.UIText-1671032103036]: 
+        textValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.deleteDoc","prefix":"","suffix":"","custom":"","useCustom":false}}
+      ↓Event [mobile.components.UIControlEvent-1671032103039]: 
+        ↓CallSequence [mobile.components.UIDynamicAction-1671032103042]: 
+          beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.DeleteDoc"}'
+          ↓CallSequence [mobile.components.UIDynamicAction-1671032103045]: 
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
+            ↓docid [mobile.components.UIControlVariable-1671032103048]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:window.localStorage.docid
+            ↓db [mobile.components.UIControlVariable-1671032103051]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: script:window.localStorage.database
+            ↓SetGlobal [mobile.components.UIDynamicAction-1671032103054]: 
+              beanData: |
+                '{
+                 "ionBean": "SetGlobalAction",
+                 "Property": "plain:currentDoc",
+                 "Value": "script:null"
+                }'
+            ↓SetGlobal1 [mobile.components.UIDynamicAction-1671032103057]: 
+              beanData: |
+                '{
+                 "ionBean": "SetGlobalAction",
+                 "Property": "plain:deleteDoc",
+                 "Value": "script:null"
+                }'
+          ↓docid [mobile.components.UIControlVariable-1671032103060]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:window.localStorage.docid
+          ↓db [mobile.components.UIControlVariable-1671032103063]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: script:window.localStorage.database
+          ↓rev [mobile.components.UIControlVariable-1671032103066]: 
+            comment: new variable
+            varValue: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.deleteDoc","prefix":"","suffix":"","custom":"","useCustom":false}}
+  ↓Grid1 [mobile.components.UIDynamicElement-1671016005345]: 
+    beanData: '{"ionBean":"Grid"}'
+    tagName: ion-grid
+    ↓GridRow [mobile.components.UIDynamicElement-1671016226928]: 
+      beanData: '{"ionBean":"GridRow"}'
+      tagName: ion-row
+      ↓GridCol [mobile.components.UIDynamicElement-1671016009656]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓TextArea [mobile.components.UIDynamicElement-1671016025305]: 
+          beanData: |
+            '{
+             "ionBean": "TextArea",
+             "Readonly": "plain:true",
+             "AreaRows": "plain:40",
+             "Value": "source:{\"filter\":\"Sequence\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"sequence\":\"FullsyncRestoreDoc.GetRevs\",\"marker\":\"\"}],\"path\":\"?.json\",\"prefix\":\"\",\"suffix\":\"\",\"custom\":\"\",\"useCustom\":false}}"
+            }'
+          tagName: ion-textarea
+          ↓Style [mobile.components.UIStyle-1671027511983]: 
+            styleContent: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '	color: black;
+                    	background-color: white;
+                    '
+      ↓GridCol1 [mobile.components.UIDynamicElement-1671016011851]: 
+        beanData: '{"ionBean":"GridCol"}'
+        tagName: ion-col
+        ↓TextArea [mobile.components.UIDynamicElement-1671016028635]: 
+          beanData: |
+            '{
+             "ionBean": "TextArea",
+             "Readonly": "plain:true",
+             "AreaRows": "plain:40",
+             "Value": "source:{\"filter\":\"Global\",\"project\":\"FullsyncRestoreDoc\",\"input\":\"\",\"model\":{\"data\":[{\"sharedObject\":\"router.sharedObject\"}],\"path\":\"?.currentDoc\",\"prefix\":\"\",\"suffix\":\"?.json\",\"custom\":\"\",\"useCustom\":false}}"
+            }'
+          tagName: ion-textarea
+          ↓Style [mobile.components.UIStyle-1671027508641]: 
+            styleContent: 
+              - xmlizable: 
+                - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                  →: |
+                    '	color: white;
+                    	background-color: black;
+                    '
+↓Footer [mobile.components.UIDynamicElement-1491634242460]: 
+  beanData: '{"ionBean":"Footer"}'
+  comment: Page footer
+  isEnabled: false
+  tagName: ion-footer
+  ↓ToolBar [mobile.components.UIDynamicElement-1491634317538]: 
+    beanData: '{"ionBean":"ToolBar"}'
+    tagName: ion-toolbar
+    ↓ButtonSet [mobile.components.UIDynamicElement-1491634325595]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:left"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634332730]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1491634340354]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 1
+        ↓Event [mobile.components.UIControlEvent-1670948599848]: 
+          ↓CallSequence [mobile.components.UIDynamicAction-1670948608683]: 
+            beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
+            ↓docid [mobile.components.UIControlVariable-1670948612968]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:doc1
+            ↓db [mobile.components.UIControlVariable-1670948612970]: 
+              comment: new variable
+              varValue: 
+                - xmlizable: 
+                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                  - MobileSmartSourceType: plain:a1
+    ↓ButtonSet1 [mobile.components.UIDynamicElement-1491634373539]: 
+      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
+      tagName: ion-buttons
+      ↓Button [mobile.components.UIDynamicElement-1491634376874]: 
+        beanData: '{"ionBean":"Button"}'
+        tagName: button
+        ↓Text [mobile.components.UIText-1491634383107]: 
+          textValue: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+              - MobileSmartSourceType: plain:Action 2
+↓PageEvent [mobile.components.UIPageEvent-1671012663264]: 
+  ↓Refresh [mobile.components.UIDynamicAction-1671038143812]: 
+    beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+↓Subscribe_Handler [mobile.components.UIEventSubscriber-1671038110458]: 
+  topic: refresh
+  ↓CallSequence [mobile.components.UIDynamicAction-1671038125476]: 
+    beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
+    ↓docid [mobile.components.UIControlVariable-1671038125479]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:window.localStorage.docid
+    ↓db [mobile.components.UIControlVariable-1671038125482]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:window.localStorage.database
+    ↓hideDeadBranches [mobile.components.UIControlVariable-1671038125485]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:window.localStorage.hideDeadBranches
+    ↓hideForgotten [mobile.components.UIControlVariable-1671038125488]: 
+      comment: new variable
+      varValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:window.localStorage.hideForgotten
