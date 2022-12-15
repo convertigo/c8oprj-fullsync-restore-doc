@@ -26,6 +26,7 @@ componentScriptContent:
 tplProjectName: mobilebuilder_tpl_7_9_0
 ↓Menu [mobile.components.UIDynamicMenu-1500890597895]: 🗏 mobileMenus/Menu.yaml
 ↓SetLocalStorage [mobile.components.UIActionStack-1671009156063]: 🗏 mobileSharedActions/SetLocalStorage.yaml
+↓ngxTagInputCustomC8oForms [mobile.components.UISharedComponent-1671128004246]: 🗏 mobileSharedComponents/ngxTagInputCustomC8oForms.yaml
 ↓Page [mobile.components.PageComponent-1500538678074]: 🗏 mobilePages/Page.yaml
 ↓Theme [mobile.components.UITheme-1491635018260]: 
   comment: Global color themes can be customized here
@@ -172,3 +173,30 @@ tplProjectName: mobilebuilder_tpl_7_9_0
           .rev.state-ok, .rev.state-ok-win {
           	cursor: pointer;
           }'
+↓customIcons [mobile.components.UIStyle-1671138314674]: 
+  styleContent: 
+    - xmlizable: 
+      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+        →: |
+          '// Custom icons
+          // Overriding the ion-icon behavior
+          // All custom icons will start with "custom-" prefix
+          ion-icon {
+              &[class*="custom-"] {
+                  // Instead of using the font-based icons
+                  // We''re applying SVG masks
+                  mask-size: contain;
+                  mask-position: 50% 50%;
+                  mask-repeat: no-repeat;
+                  background: currentColor;
+          		width: 1.2rem;
+          		height: 1.2rem;
+              }
+              // custom icons
+              &[class*="custom-bdd"] {
+                  mask-image: url(../assets/images/icons/server.svg);
+              }
+          }
+          
+          '

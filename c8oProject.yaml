@@ -6,6 +6,7 @@
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓Compact [sequences.GenericSequence]: 🗏 sequences/Compact.yaml
   ↓DeleteDoc [sequences.GenericSequence]: 🗏 sequences/DeleteDoc.yaml
+  ↓getAllDBs [sequences.GenericSequence]: 🗏 sequences/getAllDBs.yaml
   ↓GetDoc [sequences.GenericSequence]: 🗏 sequences/GetDoc.yaml
   ↓GetRevs [sequences.GenericSequence]: 🗏 sequences/GetRevs.yaml
   ↓RestoreDoc [sequences.GenericSequence]: 🗏 sequences/RestoreDoc.yaml

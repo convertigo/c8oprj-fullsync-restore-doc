@@ -1,0 +1,310 @@
+↓Tag [mobile.components.UIElement-1671128004249]: 
+  identifier: ngxTag
+  tagName: tag-input
+  ↓Attr [mobile.components.UIAttribute-1671128004252]: 
+    attrName: '[ngModel]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.items
+  ↓Attr41 [mobile.components.UIAttribute-1671128004255]: 
+    attrName: '[theme]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.theme
+  ↓Attr4 [mobile.components.UIAttribute-1671128004258]: 
+    attrName: '[maxItems]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.maxItems
+  ↓Attr5 [mobile.components.UIAttribute-1671128004261]: 
+    attrName: '[placeholder]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.placeholder
+  ↓Attr51 [mobile.components.UIAttribute-1671128004264]: 
+    attrName: '[secondaryPlaceholder]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.secondaryPlaceholder
+  ↓Attr3 [mobile.components.UIAttribute-1671128004267]: 
+    attrName: '[editable]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.editableTag
+  ↓Attr31 [mobile.components.UIAttribute-1671128004270]: 
+    attrName: '[removable]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.removableTag
+  ↓Fragment [mobile.components.UICustom-1671128004273]: 
+    htmlTemplate: |
+      '<ng-template let-item="item" let-index="index" > <!-- DEFINE HERE YOUR TEMPLATE -->
+          <span>
+      		<ion-icon item-start name="custom-bdd"></ion-icon>  {{ item.value != undefined ? item.value : item}} 
+          </span>
+      	<delete-icon (click)="ngxTag.removeItem(item, index)"></delete-icon>
+      </ng-template>'
+  ↓Tag [mobile.components.UIElement-1671128004276]: 
+    tagName: tag-input-dropdown
+    ↓Attr [mobile.components.UIAttribute-1671128004279]: 
+      attrName: '[autocompleteItems]'
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params1671128004246.autocompleteItems
+    ↓Attr11 [mobile.components.UIAttribute-1671128004282]: 
+      attrName: '[showDropdownIfEmpty]'
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:params1671128004246.showAutoCompleteDropdownIfEmpty
+    ↓Fragment [mobile.components.UICustom-1671128004285]: 
+      htmlTemplate: |
+        '<ng-template let-item="item" let-index="index">
+        	<ion-item style="background-color: transparent;">
+        	 	<ion-icon item-start name="custom-bdd"></ion-icon>  <ion-label>{{ item.value}} </ion-label>
+        	</ion-item>
+        </ng-template>'
+    ↓Attr1 [mobile.components.UIAttribute-1671128004288]: 
+      attrName: '[limitItemsTo]'
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:100
+    ↓Attr2 [mobile.components.UIAttribute-1671129683203]: 
+      attrName: '[autocompleteObservable]'
+      attrValue: 
+        - xmlizable: 
+          - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+          - MobileSmartSourceType: script:requestAutocompleteItems
+  ↓Attr2 [mobile.components.UIAttribute-1671128004291]: 
+    attrName: '[identifyBy]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.itemIdentifyBy
+  ↓Attr21 [mobile.components.UIAttribute-1671128004294]: 
+    attrName: '[displayBy]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.itemDisplayBy
+  ↓Attr1 [mobile.components.UIAttribute-1671128004297]: 
+    attrName: '[onlyFromAutocomplete]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.onlyFromAutocomplete
+  ↓Attr6 [mobile.components.UIAttribute-1671128004300]: 
+    attrName: '[inputText]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.inputtext
+  ↓Event [mobile.components.UIControlEvent-1671128004303]: 
+    attrName: (onTagEdited)
+    eventName: (onTagEdited)
+    ↓publishNgxTagInputEdited [mobile.components.UIDynamicAction-1671128004306]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputEdited",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event1 [mobile.components.UIControlEvent-1671128004309]: 
+    attrName: (onAdd)
+    eventName: (onAdd)
+    ↓publishNgxTagInputAdded [mobile.components.UIDynamicAction-1671128004312]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputAdded",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event2 [mobile.components.UIControlEvent-1671128004315]: 
+    attrName: (onRemove)
+    eventName: (onRemove)
+    ↓publishNgxTagInputRemoved [mobile.components.UIDynamicAction-1671128004318]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputRemoved",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event3 [mobile.components.UIControlEvent-1671128004321]: 
+    attrName: (onSelect)
+    eventName: (onSelect)
+    ↓publishNgxTagInputSelected [mobile.components.UIDynamicAction-1671128004324]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputSelected",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event4 [mobile.components.UIControlEvent-1671128004327]: 
+    attrName: (onFocus)
+    eventName: (onFocus)
+    ↓publishNgxTagInputFocused [mobile.components.UIDynamicAction-1671128004330]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputFocused",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event5 [mobile.components.UIControlEvent-1671128004333]: 
+    attrName: (onBlur)
+    eventName: (onBlur)
+    ↓publishNgxTagInputBlured [mobile.components.UIDynamicAction-1671128004336]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputBlured",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event6 [mobile.components.UIControlEvent-1671128004339]: 
+    attrName: (onTextChange)
+    eventName: (onTextChange)
+    ↓publishNgxTagInputChanged [mobile.components.UIDynamicAction-1671128004342]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputChanged",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event7 [mobile.components.UIControlEvent-1671128004345]: 
+    attrName: (onPaste)
+    eventName: (onPaste)
+    ↓publishNgxTagInputPasted [mobile.components.UIDynamicAction-1671128004348]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputPasted",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event8 [mobile.components.UIControlEvent-1671128004351]: 
+    attrName: (onValidationError)
+    eventName: (onValidationError)
+    ↓publishNgxTagInputValidationError [mobile.components.UIDynamicAction-1671128004354]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputValidationError",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Event81 [mobile.components.UIControlEvent-1671128004357]: 
+    attrName: (ngModelChange)
+    eventName: (ngModelChange)
+    ↓publishNgxTagInputValidationError [mobile.components.UIDynamicAction-1671128004360]: 
+      beanData: |
+        '{
+         "ionBean": "PublishEventAction",
+         "topic": "plain:ngxTagInputNgModelChange",
+         "data": "script:{event: $event, ref:  params1671128004246.ref}"
+        }'
+  ↓Attr61 [mobile.components.UIAttribute-1671128004363]: 
+    attrName: '[errorMessages]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.errorMessages
+  ↓Attr62 [mobile.components.UIAttribute-1671128004366]: 
+    attrName: '[validators]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.validators
+  ↓Attr611 [mobile.components.UIAttribute-1671128004369]: 
+    attrName: '[addOnBlur]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:true
+↓items [mobile.components.UICompVariable-1671128004372]: 
+  value: '[]'
+↓inputtext [mobile.components.UICompVariable-1671128004375]: 
+↓theme [mobile.components.UICompVariable-1671128004378]: 
+↓maxItems [mobile.components.UICompVariable-1671128004381]: 
+  value: 100
+↓placeholder [mobile.components.UICompVariable-1671128004384]: 
+↓secondaryPlaceholder [mobile.components.UICompVariable-1671128004387]: 
+↓editableTag [mobile.components.UICompVariable-1671128004390]: 
+  value: true
+↓removableTag [mobile.components.UICompVariable-1671128004393]: 
+  value: true
+↓itemIdentifyBy [mobile.components.UICompVariable-1671128004396]: 
+  value: '''value'''
+↓itemDisplayBy [mobile.components.UICompVariable-1671128004399]: 
+  value: '''display'''
+↓autocompleteItems [mobile.components.UICompVariable-1671128004402]: 
+  value: '[]'
+↓onlyFromAutocomplete [mobile.components.UICompVariable-1671128004405]: 
+  value: false
+↓showAutoCompleteDropdownIfEmpty [mobile.components.UICompVariable-1671128004408]: 
+  value: false
+↓ref [mobile.components.UICompVariable-1671128004411]: 
+↓PageEvent [mobile.components.UIPageEvent-1671128004414]: 
+  comment: Do not delete or disable !!
+  viewEvent: onCanEnter
+  ↓initialization [mobile.components.UICustomAction-1671128004417]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            		resolve();
+            
+    comment: Do not delete or disable !!
+    module_ng_imports: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: TagInputModule
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: BrowserAnimationsModule 
+    module_ts_imports: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: TagInputModule
+              - java.lang.String: 
+                - ↑value: ngx-chips
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: BrowserAnimationsModule 
+              - java.lang.String: 
+                - ↑value: '@angular/platform-browser/animations'
+    package_dependencies: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+        - com.twinsoft.convertigo.beans.common.XMLVector: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.common.XMLVector
+            - com.twinsoft.convertigo.beans.common.XMLVector: 
+              - java.lang.String: 
+                - ↑value: ngx-chips
+              - java.lang.String: 
+                - ↑value: 2.0.2
+↓errorMessages [mobile.components.UICompVariable-1671128004420]: 
+  value: '{}'
+↓validators [mobile.components.UICompVariable-1671128004423]: 
+  value: '[]'

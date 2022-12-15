@@ -7,15 +7,22 @@ scriptContent:
     - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
     - com.twinsoft.convertigo.beans.common.FormatedContent: 
       →: |
-        /*Begin_c8o_PageImport*/
+        '/*Begin_c8o_PageImport*/
+        import { Observable } from ''rxjs'';
+        import { map } from ''rxjs/operators'';
         /*End_c8o_PageImport*/
         /*Begin_c8o_PageDeclaration*/
         	/*End_c8o_PageDeclaration*/
         /*Begin_c8o_PageConstructor*/
         		/*End_c8o_PageConstructor*/
         /*Begin_c8o_PageFunction*/
+        	public requestAutocompleteItems = (text: string): Observable<Response> => {
+            	return this.c8o.callJsonObject("FullsyncRestoreDoc.getAllDbs", {
+        			key: text
+        		}).toObservable().pipe(map(data => {return JSON.parse(data.response.json).items}))
+        	};
         	/*End_c8o_PageFunction*/
-        
+        '
 segment: path-to-page
 title: Fullsync Restore Doc
 ↓Header [mobile.components.UIDynamicElement-1491634212350]: 
@@ -68,124 +75,9 @@ title: Fullsync Restore Doc
             ↓CardContent [mobile.components.UIDynamicElement-1671124290517]: 
               beanData: '{"ionBean":"CardContent"}'
               tagName: ion-card-content
-              ↓FormItem [mobile.components.UIDynamicElement-1671008024889]: 
-                beanData: '{"ionBean":"FormItem"}'
-                isEnabled: false
-                tagName: ion-item
-                ↓Label [mobile.components.UIDynamicElement-1671008045354]: 
-                  beanData: '{"ionBean":"Label"}'
-                  tagName: ion-label
-                  ↓Text [mobile.components.UIText-1671008057086]: 
-                    textValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: plain:Database :
-                ↓TextInput [mobile.components.UIDynamicElement-1671008003773]: 
-                  beanData: |
-                    '{
-                     "ionBean": "Input",
-                     "FormControlName": "plain:database",
-                     "Value": "script:window.localStorage.database"
-                    }'
-                  tagName: ion-input
-                  ↓Event [mobile.components.UIControlEvent-1671009108757]: 
-                    attrName: (keyup)
-                    eventName: (keyup)
-                    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671009234569]: 
-                      beanData: '{"ionBean":"InvokeAction"}'
-                      stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
-                      ↓key [mobile.components.UIControlVariable-1671009240515]: 
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: plain:database
-                      ↓value [mobile.components.UIControlVariable-1671009240517]: 
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['database']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-                      ↓Refresh [mobile.components.UIDynamicAction-1671038224740]: 
-                        beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
               ↓Div [mobile.components.UIDynamicElement-1671125977279]: 
                 beanData: '{"ionBean":"DivTag"}'
                 tagName: div
-                ↓UseSharedComponent [mobile.components.UIUseShared-1671125522080]: 
-                  sharedcomponent: lib_ExtendedComponents.MobileApplication.Application.ngxTagInput
-                  ↓items [mobile.components.UIControlVariable-1671125663889]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: 'script:(window.localStorage.database != undefined && window.localStorage.database != '''') ? [window.localStorage.database] : []'
-                  ↓inputtext [mobile.components.UIControlVariable-1671125663891]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:''
-                  ↓theme [mobile.components.UIControlVariable-1671125663893]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:''
-                  ↓maxItems [mobile.components.UIControlVariable-1671125663895]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:1
-                  ↓placeholder [mobile.components.UIControlVariable-1671125663897]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:'Database'
-                  ↓secondaryPlaceholder [mobile.components.UIControlVariable-1671125663899]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:'Database :'
-                  ↓editableTag [mobile.components.UIControlVariable-1671125663901]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:true
-                  ↓removableTag [mobile.components.UIControlVariable-1671125663903]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:true
-                  ↓itemIdentifyBy [mobile.components.UIControlVariable-1671125663905]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:'value'
-                  ↓itemDisplayBy [mobile.components.UIControlVariable-1671125663907]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:'display'
-                  ↓autocompleteItems [mobile.components.UIControlVariable-1671125663909]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:['database1', 'database2', 'database3']
-                  ↓onlyFromAutocomplete [mobile.components.UIControlVariable-1671125663911]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:false
-                  ↓showAutoCompleteDropdownIfEmpty [mobile.components.UIControlVariable-1671125663913]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:true
-                  ↓ref [mobile.components.UIControlVariable-1671125663915]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:'databaseValueChanged'
-                  ↓addOnBlur [mobile.components.UIControlVariable-1671125663917]: 
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:true
                 ↓Style [mobile.components.UIStyle-1671125884083]: 
                   styleContent: 
                     - xmlizable: 
@@ -194,6 +86,88 @@ title: Fullsync Restore Doc
                         →: |
                           '	margin-left: 11px;
                           '
+                ↓UseSharedComponent1 [mobile.components.UIUseShared-1671128102775]: 
+                  sharedcomponent: FullsyncRestoreDoc.MobileApplication.Application.ngxTagInputCustomC8oForms
+                  ↓items [mobile.components.UIControlVariable-1671128147662]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: 'script:(window.localStorage.database != undefined && window.localStorage.database != '''') ? [window.localStorage.database] : []'
+                  ↓inputtext [mobile.components.UIControlVariable-1671128147665]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:''
+                  ↓theme [mobile.components.UIControlVariable-1671128147668]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:''
+                  ↓maxItems [mobile.components.UIControlVariable-1671128147671]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:1
+                  ↓placeholder [mobile.components.UIControlVariable-1671128147674]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'Database'
+                  ↓secondaryPlaceholder [mobile.components.UIControlVariable-1671128147677]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'Database :'
+                  ↓editableTag [mobile.components.UIControlVariable-1671128147680]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓removableTag [mobile.components.UIControlVariable-1671128147683]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓itemIdentifyBy [mobile.components.UIControlVariable-1671128147686]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'value'
+                  ↓itemDisplayBy [mobile.components.UIControlVariable-1671128147689]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'display'
+                  ↓onlyFromAutocomplete [mobile.components.UIControlVariable-1671128147695]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:false
+                  ↓showAutoCompleteDropdownIfEmpty [mobile.components.UIControlVariable-1671128147698]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓ref [mobile.components.UIControlVariable-1671128147701]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'databaseValueChanged'
+                  ↓addOnBlur [mobile.components.UIControlVariable-1671128147704]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓errorMessages [mobile.components.UIControlVariable-1671128150713]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:{}
+                  ↓validators [mobile.components.UIControlVariable-1671128150715]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:[]
               ↓FormItem1 [mobile.components.UIDynamicElement-1671008664064]: 
                 beanData: '{"ionBean":"FormItem"}'
                 tagName: ion-item
