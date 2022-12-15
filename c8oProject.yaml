@@ -2,13 +2,15 @@
 ↓FullsyncRestoreDoc [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 7.9.0.0
+  version: 7.9.0.1
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓Compact [sequences.GenericSequence]: 🗏 sequences/Compact.yaml
   ↓DeleteDoc [sequences.GenericSequence]: 🗏 sequences/DeleteDoc.yaml
   ↓GetDoc [sequences.GenericSequence]: 🗏 sequences/GetDoc.yaml
   ↓GetRevs [sequences.GenericSequence]: 🗏 sequences/GetRevs.yaml
   ↓RestoreDoc [sequences.GenericSequence]: 🗏 sequences/RestoreDoc.yaml
+  ↓lib_ExtendedComponents_reference [references.ProjectSchemaReference]: 
+    projectName: lib_ExtendedComponents=https://github.com/convertigo/c8oprj-lib-extended-components.git:branch=e3e9d44852926548a303b217a62c7570dd2a0d45
   ↓MobileBuilderTemplate [references.ProjectSchemaReference]: 
     comment: mobile builder template
     projectName: mobilebuilder_tpl_7_9_0=https://github.com/convertigo/c8oprj-mobilebuilder-tpl/archive/mobilebuilder_tpl_7_9_0.zip

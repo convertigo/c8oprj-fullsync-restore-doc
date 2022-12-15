@@ -62,6 +62,9 @@ tplProjectName: mobilebuilder_tpl_7_9_0
           $colors: (
                   primary:    #387ef5,
                   secondary:  #32db64,
+          		orange: 	#ff8206,
+          		green: 	green,
+          		lightgreen: lightgreen,
                   danger:     #f53d3d,
                   light:      #f4f4f4,
                   dark:       #222
@@ -141,19 +144,19 @@ tplProjectName: mobilebuilder_tpl_7_9_0
       - com.twinsoft.convertigo.beans.common.FormatedContent: 
         →: |
           '.state-ok-win {
-          	background-color: lightgreen;
+          	background-color: color($colors, lightgreen);
           }
           
           .state-ok-win, .state-ok {
-          	color: green;
+          	color: color($colors, green);
           }
           
           .state-deleted {
-          	color: orange;
+          	color: color($colors, orange);
           }
           
           .state-missing {
-          	color: red;
+          	color: color($colors, danger);
           }
           
           .rev>span {

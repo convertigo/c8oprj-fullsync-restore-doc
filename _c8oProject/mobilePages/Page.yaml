@@ -1,5 +1,6 @@
 ↑isRoot: true
 comment: My First Page as root page
+icon: cog
 preloadPriority: high
 scriptContent: 
   - xmlizable: 
@@ -16,7 +17,7 @@ scriptContent:
         	/*End_c8o_PageFunction*/
         
 segment: path-to-page
-title: First page
+title: Fullsync Restore Doc
 ↓Header [mobile.components.UIDynamicElement-1491634212350]: 
   beanData: '{"ionBean":"Header"}'
   comment: Page header
@@ -39,174 +40,376 @@ title: First page
       ↓Icon [mobile.components.UIDynamicElement-1491634475867]: 
         beanData: '{"ionBean":"Icon","IconName":"plain:menu"}'
         tagName: ion-icon
-    ↓ButtonSet [mobile.components.UIDynamicElement-1491634611427]: 
-      beanData: '{"ionBean":"ButtonSet","SetPosition":"plain:right"}'
-      tagName: ion-buttons
-      ↓Button [mobile.components.UIDynamicElement-1491634621907]: 
-        beanData: '{"ionBean":"Button"}'
-        tagName: button
-        ↓Icon [mobile.components.UIDynamicElement-1491634637555]: 
-          beanData: '{"ionBean":"Icon","IconName":"plain:more"}'
-          tagName: ion-icon
 ↓Content [mobile.components.UIDynamicElement-1489674805352]: 
   beanData: '{"ionBean":"Content"}'
   comment: Page content
   tagName: ion-content
-  ↓CardContainer [mobile.components.UIDynamicElement-1671007912773]: 
-    beanData: '{"ionBean":"Card"}'
-    tagName: ion-card
-    ↓CardContent [mobile.components.UIDynamicElement-1671007925125]: 
-      beanData: '{"ionBean":"CardContent"}'
-      tagName: ion-card-content
-      ↓Form [mobile.components.UIForm-1671008019737]: 
-        ↓FormItem [mobile.components.UIDynamicElement-1671008024889]: 
-          beanData: '{"ionBean":"FormItem"}'
-          tagName: ion-item
-          ↓Label [mobile.components.UIDynamicElement-1671008045354]: 
-            beanData: '{"ionBean":"Label"}'
-            tagName: ion-label
-            ↓Text [mobile.components.UIText-1671008057086]: 
-              textValue: 
+  ↓Form [mobile.components.UIForm-1671008019737]: 
+    ↓Grid [mobile.components.UIDynamicElement-1671123355482]: 
+      beanData: '{"ionBean":"Grid"}'
+      tagName: ion-grid
+      ↓GridRow [mobile.components.UIDynamicElement-1671123363523]: 
+        beanData: '{"ionBean":"GridRow"}'
+        tagName: ion-row
+        ↓GridCol [mobile.components.UIDynamicElement-1671123366410]: 
+          beanData: '{"ionBean":"GridCol","Columns":"plain:6"}'
+          tagName: ion-col
+          ↓CardContainer [mobile.components.UIDynamicElement-1671124280916]: 
+            beanData: '{"ionBean":"Card"}'
+            tagName: ion-card
+            ↓CardHeader [mobile.components.UIDynamicElement-1671124288403]: 
+              beanData: '{"ionBean":"CardHeader"}'
+              tagName: ion-card-header
+              ↓Text [mobile.components.UIText-1671124771654]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Parameters
+            ↓CardContent [mobile.components.UIDynamicElement-1671124290517]: 
+              beanData: '{"ionBean":"CardContent"}'
+              tagName: ion-card-content
+              ↓FormItem [mobile.components.UIDynamicElement-1671008024889]: 
+                beanData: '{"ionBean":"FormItem"}'
+                isEnabled: false
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671008045354]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671008057086]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Database :
+                ↓TextInput [mobile.components.UIDynamicElement-1671008003773]: 
+                  beanData: |
+                    '{
+                     "ionBean": "Input",
+                     "FormControlName": "plain:database",
+                     "Value": "script:window.localStorage.database"
+                    }'
+                  tagName: ion-input
+                  ↓Event [mobile.components.UIControlEvent-1671009108757]: 
+                    attrName: (keyup)
+                    eventName: (keyup)
+                    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671009234569]: 
+                      beanData: '{"ionBean":"InvokeAction"}'
+                      stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                      ↓key [mobile.components.UIControlVariable-1671009240515]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:database
+                      ↓value [mobile.components.UIControlVariable-1671009240517]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['database']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                      ↓Refresh [mobile.components.UIDynamicAction-1671038224740]: 
+                        beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+              ↓Div [mobile.components.UIDynamicElement-1671125977279]: 
+                beanData: '{"ionBean":"DivTag"}'
+                tagName: div
+                ↓UseSharedComponent [mobile.components.UIUseShared-1671125522080]: 
+                  sharedcomponent: lib_ExtendedComponents.MobileApplication.Application.ngxTagInput
+                  ↓items [mobile.components.UIControlVariable-1671125663889]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: 'script:(window.localStorage.database != undefined && window.localStorage.database != '''') ? [window.localStorage.database] : []'
+                  ↓inputtext [mobile.components.UIControlVariable-1671125663891]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:''
+                  ↓theme [mobile.components.UIControlVariable-1671125663893]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:''
+                  ↓maxItems [mobile.components.UIControlVariable-1671125663895]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:1
+                  ↓placeholder [mobile.components.UIControlVariable-1671125663897]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'Database'
+                  ↓secondaryPlaceholder [mobile.components.UIControlVariable-1671125663899]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'Database :'
+                  ↓editableTag [mobile.components.UIControlVariable-1671125663901]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓removableTag [mobile.components.UIControlVariable-1671125663903]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓itemIdentifyBy [mobile.components.UIControlVariable-1671125663905]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'value'
+                  ↓itemDisplayBy [mobile.components.UIControlVariable-1671125663907]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'display'
+                  ↓autocompleteItems [mobile.components.UIControlVariable-1671125663909]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:['database1', 'database2', 'database3']
+                  ↓onlyFromAutocomplete [mobile.components.UIControlVariable-1671125663911]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:false
+                  ↓showAutoCompleteDropdownIfEmpty [mobile.components.UIControlVariable-1671125663913]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                  ↓ref [mobile.components.UIControlVariable-1671125663915]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:'databaseValueChanged'
+                  ↓addOnBlur [mobile.components.UIControlVariable-1671125663917]: 
+                    varValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: script:true
+                ↓Style [mobile.components.UIStyle-1671125884083]: 
+                  styleContent: 
+                    - xmlizable: 
+                      - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                      - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                        →: |
+                          '	margin-left: 11px;
+                          '
+              ↓FormItem1 [mobile.components.UIDynamicElement-1671008664064]: 
+                beanData: '{"ionBean":"FormItem"}'
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671008664067]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671008664070]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Doc id :
+                ↓TextInput [mobile.components.UIDynamicElement-1671008664073]: 
+                  beanData: |
+                    '{
+                     "ionBean": "Input",
+                     "FormControlName": "plain:docid",
+                     "Value": "script:window.localStorage.docid"
+                    }'
+                  tagName: ion-input
+                  ↓Event [mobile.components.UIControlEvent-1671012374208]: 
+                    attrName: (keyup)
+                    eventName: (keyup)
+                    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671012374211]: 
+                      beanData: '{"ionBean":"InvokeAction"}'
+                      stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                      ↓key [mobile.components.UIControlVariable-1671012374214]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:docid
+                      ↓value [mobile.components.UIControlVariable-1671012374217]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['docid']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                      ↓Refresh [mobile.components.UIDynamicAction-1671038230461]: 
+                        beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+              ↓FormItem2 [mobile.components.UIDynamicElement-1671034987699]: 
+                beanData: '{"ionBean":"FormItem"}'
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671035044444]: 
+                  beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671035052342]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:hide dead branches
+                ↓CheckBox [mobile.components.UIDynamicElement-1671035034612]: 
+                  beanData: |
+                    '{
+                     "ionBean": "CheckBox",
+                     "FormControlName": "plain:hideDeadBranches",
+                     "Checked": "script:window.localStorage.hideDeadBranches == true"
+                    }'
+                  tagName: ion-checkbox
+                  ↓Event [mobile.components.UIControlEvent-1671035398276]: 
+                    attrName: (ionChange)
+                    eventName: ionChange
+                    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671035398279]: 
+                      beanData: '{"ionBean":"InvokeAction"}'
+                      stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                      ↓key [mobile.components.UIControlVariable-1671035398282]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:hideDeadBranches
+                      ↓value [mobile.components.UIControlVariable-1671035398285]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['hideDeadBranches']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                      ↓Refresh [mobile.components.UIDynamicAction-1671038239037]: 
+                        beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+              ↓FormItem3 [mobile.components.UIDynamicElement-1671035290903]: 
+                beanData: '{"ionBean":"FormItem"}'
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671035290906]: 
+                  beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671035290909]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:hide forgotten revisions
+                ↓CheckBox [mobile.components.UIDynamicElement-1671035290912]: 
+                  beanData: |
+                    '{
+                     "ionBean": "CheckBox",
+                     "FormControlName": "plain:hideForgotten",
+                     "Checked": "script:window.localStorage.hideForgotten == true"
+                    }'
+                  tagName: ion-checkbox
+                  ↓Event [mobile.components.UIControlEvent-1671035970844]: 
+                    attrName: (ionChange)
+                    eventName: ionChange
+                    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671035970847]: 
+                      beanData: '{"ionBean":"InvokeAction"}'
+                      stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+                      ↓key [mobile.components.UIControlVariable-1671035970850]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: plain:hideForgotten
+                      ↓value [mobile.components.UIControlVariable-1671035970853]: 
+                        varValue: 
+                          - xmlizable: 
+                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                            - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['hideForgotten']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
+                      ↓Refresh [mobile.components.UIDynamicAction-1671038244361]: 
+                        beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+            ↓Style [mobile.components.UIStyle-1671125125609]: 
+              styleContent: 
                 - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Database :
-          ↓TextInput [mobile.components.UIDynamicElement-1671008003773]: 
-            beanData: |
-              '{
-               "ionBean": "Input",
-               "FormControlName": "plain:database",
-               "Value": "script:window.localStorage.database"
-              }'
-            tagName: ion-input
-            ↓Event [mobile.components.UIControlEvent-1671009108757]: 
-              attrName: (keyup)
-              eventName: (keyup)
-              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671009234569]: 
-                beanData: '{"ionBean":"InvokeAction"}'
-                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
-                ↓key [mobile.components.UIControlVariable-1671009240515]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: plain:database
-                ↓value [mobile.components.UIControlVariable-1671009240517]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['database']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-                ↓Refresh [mobile.components.UIDynamicAction-1671038224740]: 
-                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
-        ↓FormItem1 [mobile.components.UIDynamicElement-1671008664064]: 
-          beanData: '{"ionBean":"FormItem"}'
-          tagName: ion-item
-          ↓Label [mobile.components.UIDynamicElement-1671008664067]: 
-            beanData: '{"ionBean":"Label"}'
-            tagName: ion-label
-            ↓Text [mobile.components.UIText-1671008664070]: 
-              textValue: 
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	height: 100%;
+                      '
+        ↓GridCol1 [mobile.components.UIDynamicElement-1671123368652]: 
+          beanData: '{"ionBean":"GridCol","Columns":"plain:6"}'
+          tagName: ion-col
+          ↓CardContainer [mobile.components.UIDynamicElement-1671123427784]: 
+            beanData: '{"ionBean":"Card"}'
+            tagName: ion-card
+            ↓CardHeader [mobile.components.UIDynamicElement-1671123431858]: 
+              beanData: '{"ionBean":"CardHeader"}'
+              tagName: ion-card-header
+              ↓Text [mobile.components.UIText-1671123477377]: 
+                textValue: 
+                  - xmlizable: 
+                    - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                    - MobileSmartSourceType: plain:Legend
+            ↓CardContent [mobile.components.UIDynamicElement-1671123434234]: 
+              beanData: '{"ionBean":"CardContent"}'
+              tagName: ion-card-content
+              ↓GenericItem [mobile.components.UIDynamicElement-1671123525302]: 
+                beanData: '{"ionBean":"GenericItem"}'
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671123530994]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671123581059]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Winning revision
+                ↓Icon [mobile.components.UIDynamicElement-1671123536192]: 
+                  beanData: |
+                    '{
+                     "ionBean": "Icon",
+                     "IconName": "plain:square",
+                     "ItemPosition": "plain:item-start",
+                     "IonColor": "plain:green"
+                    }'
+                  tagName: ion-icon
+              ↓GenericItem1 [mobile.components.UIDynamicElement-1671123605178]: 
+                beanData: '{"ionBean":"GenericItem"}'
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671123605181]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671123605184]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Deleted revision
+                ↓Icon [mobile.components.UIDynamicElement-1671123605187]: 
+                  beanData: |
+                    '{
+                     "ionBean": "Icon",
+                     "IconName": "plain:square",
+                     "ItemPosition": "plain:item-start",
+                     "IonColor": "plain:orange"
+                    }'
+                  tagName: ion-icon
+              ↓GenericItem2 [mobile.components.UIDynamicElement-1671123607888]: 
+                beanData: '{"ionBean":"GenericItem"}'
+                tagName: ion-item
+                ↓Label [mobile.components.UIDynamicElement-1671123607891]: 
+                  beanData: '{"ionBean":"Label"}'
+                  tagName: ion-label
+                  ↓Text [mobile.components.UIText-1671123607894]: 
+                    textValue: 
+                      - xmlizable: 
+                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+                        - MobileSmartSourceType: plain:Missing revision
+                ↓Icon [mobile.components.UIDynamicElement-1671123607897]: 
+                  beanData: |
+                    '{
+                     "ionBean": "Icon",
+                     "IconName": "plain:square",
+                     "ItemPosition": "plain:item-start",
+                     "IonColor": "plain:danger"
+                    }'
+                  tagName: ion-icon
+            ↓Style [mobile.components.UIStyle-1671124399343]: 
+              styleContent: 
                 - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:Doc id :
-          ↓TextInput [mobile.components.UIDynamicElement-1671008664073]: 
-            beanData: |
-              '{
-               "ionBean": "Input",
-               "FormControlName": "plain:docid",
-               "Value": "script:window.localStorage.docid"
-              }'
-            tagName: ion-input
-            ↓Event [mobile.components.UIControlEvent-1671012374208]: 
-              attrName: (keyup)
-              eventName: (keyup)
-              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671012374211]: 
-                beanData: '{"ionBean":"InvokeAction"}'
-                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
-                ↓key [mobile.components.UIControlVariable-1671012374214]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: plain:docid
-                ↓value [mobile.components.UIControlVariable-1671012374217]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['docid']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-                ↓Refresh [mobile.components.UIDynamicAction-1671038230461]: 
-                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
-        ↓FormItem2 [mobile.components.UIDynamicElement-1671034987699]: 
-          beanData: '{"ionBean":"FormItem"}'
-          tagName: ion-item
-          ↓Label [mobile.components.UIDynamicElement-1671035044444]: 
-            beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
-            tagName: ion-label
-            ↓Text [mobile.components.UIText-1671035052342]: 
-              textValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:hide dead branches
-          ↓CheckBox [mobile.components.UIDynamicElement-1671035034612]: 
-            beanData: |
-              '{
-               "ionBean": "CheckBox",
-               "FormControlName": "plain:hideDeadBranches",
-               "Checked": "script:window.localStorage.hideDeadBranches == true"
-              }'
-            tagName: ion-checkbox
-            ↓Event [mobile.components.UIControlEvent-1671035398276]: 
-              attrName: (ionChange)
-              eventName: ionChange
-              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671035398279]: 
-                beanData: '{"ionBean":"InvokeAction"}'
-                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
-                ↓key [mobile.components.UIControlVariable-1671035398282]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: plain:hideDeadBranches
-                ↓value [mobile.components.UIControlVariable-1671035398285]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['hideDeadBranches']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-                ↓Refresh [mobile.components.UIDynamicAction-1671038239037]: 
-                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
-        ↓FormItem3 [mobile.components.UIDynamicElement-1671035290903]: 
-          beanData: '{"ionBean":"FormItem"}'
-          tagName: ion-item
-          ↓Label [mobile.components.UIDynamicElement-1671035290906]: 
-            beanData: '{"ionBean":"Label","RangeLeft":"plain:range-left"}'
-            tagName: ion-label
-            ↓Text [mobile.components.UIText-1671035290909]: 
-              textValue: 
-                - xmlizable: 
-                  - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                  - MobileSmartSourceType: plain:hide forgotten revisions
-          ↓CheckBox [mobile.components.UIDynamicElement-1671035290912]: 
-            beanData: |
-              '{
-               "ionBean": "CheckBox",
-               "FormControlName": "plain:hideForgotten",
-               "Checked": "script:window.localStorage.hideForgotten == true"
-              }'
-            tagName: ion-checkbox
-            ↓Event [mobile.components.UIControlEvent-1671035970844]: 
-              attrName: (ionChange)
-              eventName: ionChange
-              ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671035970847]: 
-                beanData: '{"ionBean":"InvokeAction"}'
-                stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
-                ↓key [mobile.components.UIControlVariable-1671035970850]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: plain:hideForgotten
-                ↓value [mobile.components.UIControlVariable-1671035970853]: 
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Form","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"priority":1671008019737}],"path":"?.controls['hideForgotten']?.value","prefix":"","suffix":"","custom":"","useCustom":false}}
-                ↓Refresh [mobile.components.UIDynamicAction-1671038244361]: 
-                  beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+                  - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+                  - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                    →: |
+                      '	height: 100%;
+                      '
+        ↓Style [mobile.components.UIStyle-1671125093434]: 
+          styleContent: 
+            - xmlizable: 
+              - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+              - com.twinsoft.convertigo.beans.common.FormatedContent: 
+                →: |
+                  'display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: stretch;
+                      align-content: center;
+                  '
   ↓Grid [mobile.components.UIDynamicElement-1670948693955]: 
     beanData: '{"ionBean":"Grid"}'
     tagName: ion-grid
@@ -576,3 +779,37 @@ title: First page
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
           - MobileSmartSourceType: script:window.localStorage.hideForgotten
+↓Subscribe_Handler1 [mobile.components.UIEventSubscriber-1671126139700]: 
+  topic: ngxTagInputNgModelChange
+  ↓getValue [mobile.components.UICustomAction-1671126181263]: 
+    actionValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            		if(event.ref == "databaseValueChanged"){
+            			if(event.event != undefined && event.event.length > 0){
+            				resolve(event.event[0].value);
+            			}
+            			else{
+            				resolve("");
+            			}
+            		}
+            		//console.log("event",event)
+            		//resolve();
+            
+    ↓InvokeSharedAction [mobile.components.UIDynamicInvoke-1671126537540]: 
+      beanData: '{"ionBean":"InvokeAction"}'
+      stack: FullsyncRestoreDoc.MobileApplication.Application.SetLocalStorage
+      ↓key [mobile.components.UIControlVariable-1671126537543]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: plain:database
+      ↓value [mobile.components.UIControlVariable-1671126537546]: 
+        varValue: 
+          - xmlizable: 
+            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+            - MobileSmartSourceType: script:parent.out
+      ↓Refresh [mobile.components.UIDynamicAction-1671126537549]: 
+        beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
