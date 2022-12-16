@@ -47,7 +47,7 @@
     htmlTemplate: |
       '<ng-template let-item="item" let-index="index" > <!-- DEFINE HERE YOUR TEMPLATE -->
           <span>
-      		<ion-icon item-start name="custom-bdd"></ion-icon>  {{ item.value != undefined ? item.value : item}} 
+      		<ion-icon item-start [name]="params1671128004246.ref == ''databaseValueChanged'' ? ''custom-bdd'' : ''md-document''"></ion-icon>  {{ item.value != undefined ? item.value : item}} 
           </span>
       	<delete-icon (click)="ngxTag.removeItem(item, index)"></delete-icon>
       </ng-template>'
@@ -68,9 +68,11 @@
     ↓Fragment [mobile.components.UICustom-1671128004285]: 
       htmlTemplate: |
         '<ng-template let-item="item" let-index="index">
-        	<ion-item style="background-color: transparent;">
-        	 	<ion-icon item-start name="custom-bdd"></ion-icon>  <ion-label>{{ item.value}} </ion-label>
+        <div>
+        	<ion-item style="background-color: transparent;" [attr.title]="item.value" class="classNoSpaces">
+        	 	<ion-icon item-start [name]="params1671128004246.ref == ''databaseValueChanged'' ? ''custom-bdd'' : ''md-document''"></ion-icon>  <ion-label>{{ item.value}} </ion-label>
         	</ion-item>
+        	</div>
         </ng-template>'
     ↓Attr1 [mobile.components.UIAttribute-1671128004288]: 
       attrName: '[limitItemsTo]'
@@ -83,7 +85,7 @@
       attrValue: 
         - xmlizable: 
           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-          - MobileSmartSourceType: script:requestAutocompleteItems
+          - MobileSmartSourceType: script:params1671128004246.autocompleteObservable
   ↓Attr2 [mobile.components.UIAttribute-1671128004291]: 
     attrName: '[identifyBy]'
     attrValue: 
@@ -226,6 +228,21 @@
       - xmlizable: 
         - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
         - MobileSmartSourceType: script:true
+  ↓Style [mobile.components.UIStyle-1671186093983]: 
+    styleContent: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.common.FormatedContent
+        - com.twinsoft.convertigo.beans.common.FormatedContent: 
+          →: |
+            '
+            }
+            :host /deep/ ng2-dropdown-menu div { width: 750px !important; '
+  ↓Attr6111 [mobile.components.UIAttribute-1671187777558]: 
+    attrName: '[disable]'
+    attrValue: 
+      - xmlizable: 
+        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
+        - MobileSmartSourceType: script:params1671128004246.disable
 ↓items [mobile.components.UICompVariable-1671128004372]: 
   value: '[]'
 ↓inputtext [mobile.components.UICompVariable-1671128004375]: 
@@ -308,3 +325,6 @@
   value: '{}'
 ↓validators [mobile.components.UICompVariable-1671128004423]: 
   value: '[]'
+↓autocompleteObservable [mobile.components.UICompVariable-1671187212163]: 
+↓disable [mobile.components.UICompVariable-1671187763592]: 
+  value: false

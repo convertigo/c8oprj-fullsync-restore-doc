@@ -137,7 +137,17 @@ tplProjectName: mobilebuilder_tpl_7_9_0
           	 		background-color: your color; 
           	*/
           }
-          '
+          
+          .classNoSpaces{
+          	padding-left:0 !important;
+          	ion-icon{
+          		margin-right: 0 !important;
+          	}
+          	.item-inner{
+          		margin-left: 5px !important;
+          		padding-right: 0 !important;
+          	}
+          }'
 ↓States [mobile.components.UIStyle-1670950069174]: 
   styleContent: 
     - xmlizable: 
@@ -150,23 +160,35 @@ tplProjectName: mobilebuilder_tpl_7_9_0
           
           .state-ok-win, .state-ok {
           	color: color($colors, green);
+          	ion-label{
+          		color: black;
+          		font-weight: bold;
+          	}
           }
           
           .state-deleted {
           	color: color($colors, orange);
+          	ion-label{
+          		color: black;
+          		font-weight: bold;
+          	}
           }
           
           .state-missing {
           	color: color($colors, danger);
+          	ion-label{
+          		color: black;
+          		font-weight: bold;
+          	}
           }
           
-          .rev>span {
+          .rev>ion-card {
           	overflow-wrap: anywhere;
           }
           
           .rev.state-missing, .rev.state-deleted, .rev.state-ok, .rev.state-ok-win {
-          	border: solid 1px;
-          	border-radius: 15px;
+          	border: solid 3px;
+          	border-radius: 7.5px;
           	margin: 1px;
           }
           

@@ -1,0 +1,29 @@
+accessibility: Private
+↓Init [steps.SimpleStep-1671187580019]: 
+  expression: |
+    'var toJSON = function(json) {
+    	return JSON.parse(json.toString());
+    }
+    
+    var fsclient = com.twinsoft.convertigo.engine.Engine.theApp.couchDbManager.getFullSyncClient();
+    var query = new java.util.HashMap();
+    
+    query.put("limit", "" + limit);
+    query.put("skip", "" + skip);
+    query.put("startkey", ''"'' + key + ''"'');
+    query.put("endkey", ''"'' + key + ''\uffff'' + ''"'');
+    let json = toJSON(fsclient.getAllDocs(""+db, query));'
+↓rev [steps.ElementStep-1671187580022]: 
+  expression: rev
+  nodeName: rev
+↓json [steps.ElementStep-1671187580025]: 
+  expression: JSON.stringify(json, null, 2)
+  nodeName: json
+↓limit [variables.RequestableVariable-1671187580028]: 
+  value: 100
+↓skip [variables.RequestableVariable-1671187580031]: 
+  value: 0
+↓key [variables.RequestableVariable-1671187580034]: 
+  value: 
+↓db [variables.RequestableVariable-1671187673328]: 
+  value: 
