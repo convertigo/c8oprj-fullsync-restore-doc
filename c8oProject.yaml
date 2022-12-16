@@ -2,7 +2,7 @@
 ↓FullsyncRestoreDoc [core.Project]: 
   comment: Convertigo Mobile builder Project
   corsOrigin: =Origin
-  version: 7.9.0.2
+  version: 7.9.0.3
   ↓void [connectors.SqlConnector]: 🗏 connectors/void.yaml
   ↓Compact [sequences.GenericSequence]: 🗏 sequences/Compact.yaml
   ↓DeleteDoc [sequences.GenericSequence]: 🗏 sequences/DeleteDoc.yaml
@@ -19,4 +19,5 @@
   ↓MobileApplication [core.MobileApplication]: 
     comment: Describes the mobile application global properties
     splashRemoveMode: beforeUpdate
+    ↓Android [mobileplatforms.Android]: 
     ↓Application [mobile.components.ApplicationComponent]: 🗏 mobileApplication.yaml

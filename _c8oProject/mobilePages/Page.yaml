@@ -709,61 +709,6 @@ title: Fullsync Restore Doc
                   - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                   - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.currentDoc","prefix":"","suffix":"?.rev","custom":"","useCustom":false}}
             ↓Event [mobile.components.UIControlEvent-1671027798644]: 
-              ↓CallSequence [mobile.components.UIDynamicAction-1671027886840]: 
-                beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.RestoreDoc"}'
-                isEnabled: false
-                ↓CallSequence [mobile.components.UIDynamicAction-1671027895888]: 
-                  beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
-                  ↓docid [mobile.components.UIControlVariable-1671027895891]: 
-                    comment: new variable
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:window.localStorage.docid
-                  ↓db [mobile.components.UIControlVariable-1671027895894]: 
-                    comment: new variable
-                    varValue: 
-                      - xmlizable: 
-                        - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                        - MobileSmartSourceType: script:window.localStorage.database
-                  ↓SetGlobal [mobile.components.UIDynamicAction-1671031633985]: 
-                    beanData: |
-                      '{
-                       "ionBean": "SetGlobalAction",
-                       "Property": "plain:currentDoc",
-                       "Value": "script:null"
-                      }'
-                  ↓SetGlobal1 [mobile.components.UIDynamicAction-1671031657325]: 
-                    beanData: |
-                      '{
-                       "ionBean": "SetGlobalAction",
-                       "Property": "plain:deleteDoc",
-                       "Value": "script:null"
-                      }'
-                ↓docid [mobile.components.UIControlVariable-1671027902696]: 
-                  comment: new variable
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: script:window.localStorage.docid
-                ↓db [mobile.components.UIControlVariable-1671027902698]: 
-                  comment: new variable
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: script:window.localStorage.database
-                ↓rev [mobile.components.UIControlVariable-1671027902700]: 
-                  comment: new variable
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.currentDoc","prefix":"","suffix":"?.rev","custom":"","useCustom":false}}
-                ↓oldrev [mobile.components.UIControlVariable-1671028701767]: 
-                  comment: new variable
-                  varValue: 
-                    - xmlizable: 
-                      - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                      - MobileSmartSourceType: source:{"filter":"Sequence","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sequence":"FullsyncRestoreDoc.GetRevs","marker":""}],"path":"?.rev","prefix":"","suffix":"","custom":"","useCustom":false}}
               ↓Alert [mobile.components.UIDynamicAction-1671190036665]: 
                 beanData: |
                   '{
@@ -780,34 +725,6 @@ title: Fullsync Restore Doc
                   beanData: '{"ionBean":"IfAction"}'
                   ↓CallSequence [mobile.components.UIDynamicAction-1671190046023]: 
                     beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.RestoreDoc"}'
-                    ↓CallSequence [mobile.components.UIDynamicAction-1671190046026]: 
-                      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
-                      ↓docid [mobile.components.UIControlVariable-1671190046029]: 
-                        comment: new variable
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: script:window.localStorage.docid
-                      ↓db [mobile.components.UIControlVariable-1671190046032]: 
-                        comment: new variable
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: script:window.localStorage.database
-                      ↓SetGlobal [mobile.components.UIDynamicAction-1671190046035]: 
-                        beanData: |
-                          '{
-                           "ionBean": "SetGlobalAction",
-                           "Property": "plain:currentDoc",
-                           "Value": "script:null"
-                          }'
-                      ↓SetGlobal1 [mobile.components.UIDynamicAction-1671190046038]: 
-                        beanData: |
-                          '{
-                           "ionBean": "SetGlobalAction",
-                           "Property": "plain:deleteDoc",
-                           "Value": "script:null"
-                          }'
                     ↓docid [mobile.components.UIControlVariable-1671190046041]: 
                       comment: new variable
                       varValue: 
@@ -832,6 +749,22 @@ title: Fullsync Restore Doc
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Sequence","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sequence":"FullsyncRestoreDoc.GetRevs","marker":""}],"path":"?.rev","prefix":"","suffix":"","custom":"","useCustom":false}}
+                    ↓Refresh [mobile.components.UIDynamicAction-1671201556912]: 
+                      beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+                      ↓SetGlobal [mobile.components.UIDynamicAction-1671201556915]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:currentDoc",
+                           "Value": "script:null"
+                          }'
+                      ↓SetGlobal1 [mobile.components.UIDynamicAction-1671201556918]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:deleteDoc",
+                           "Value": "script:null"
+                          }'
           ↓Attr [mobile.components.UIAttribute-1671190315501]: 
             attrName: 
             attrValue: 
@@ -889,34 +822,6 @@ title: Fullsync Restore Doc
                   beanData: '{"ionBean":"IfAction"}'
                   ↓CallSequence [mobile.components.UIDynamicAction-1671032103042]: 
                     beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.DeleteDoc"}'
-                    ↓CallSequence [mobile.components.UIDynamicAction-1671032103045]: 
-                      beanData: '{"ionBean":"CallSequenceAction","requestable":"plain:FullsyncRestoreDoc.GetRevs"}'
-                      ↓docid [mobile.components.UIControlVariable-1671032103048]: 
-                        comment: new variable
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: script:window.localStorage.docid
-                      ↓db [mobile.components.UIControlVariable-1671032103051]: 
-                        comment: new variable
-                        varValue: 
-                          - xmlizable: 
-                            - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
-                            - MobileSmartSourceType: script:window.localStorage.database
-                      ↓SetGlobal [mobile.components.UIDynamicAction-1671032103054]: 
-                        beanData: |
-                          '{
-                           "ionBean": "SetGlobalAction",
-                           "Property": "plain:currentDoc",
-                           "Value": "script:null"
-                          }'
-                      ↓SetGlobal1 [mobile.components.UIDynamicAction-1671032103057]: 
-                        beanData: |
-                          '{
-                           "ionBean": "SetGlobalAction",
-                           "Property": "plain:deleteDoc",
-                           "Value": "script:null"
-                          }'
                     ↓docid [mobile.components.UIControlVariable-1671032103060]: 
                       comment: new variable
                       varValue: 
@@ -935,6 +840,22 @@ title: Fullsync Restore Doc
                         - xmlizable: 
                           - ↑classname: com.twinsoft.convertigo.beans.mobile.components.MobileSmartSourceType
                           - MobileSmartSourceType: source:{"filter":"Global","project":"FullsyncRestoreDoc","input":"","model":{"data":[{"sharedObject":"router.sharedObject"}],"path":"?.deleteDoc","prefix":"","suffix":"","custom":"","useCustom":false}}
+                    ↓Refresh [mobile.components.UIDynamicAction-1671201502670]: 
+                      beanData: '{"ionBean":"PublishEventAction","topic":"plain:refresh"}'
+                      ↓SetGlobal [mobile.components.UIDynamicAction-1671032103054]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:currentDoc",
+                           "Value": "script:null"
+                          }'
+                      ↓SetGlobal1 [mobile.components.UIDynamicAction-1671032103057]: 
+                        beanData: |
+                          '{
+                           "ionBean": "SetGlobalAction",
+                           "Property": "plain:deleteDoc",
+                           "Value": "script:null"
+                          }'
   ↓Grid1 [mobile.components.UIDynamicElement-1671016005345]: 
     beanData: '{"ionBean":"Grid"}'
     tagName: ion-grid
