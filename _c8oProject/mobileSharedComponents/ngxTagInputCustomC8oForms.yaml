@@ -47,7 +47,8 @@
     htmlTemplate: |
       '<ng-template let-item="item" let-index="index" > <!-- DEFINE HERE YOUR TEMPLATE -->
           <span>
-      		<ion-icon item-start [name]="params1671128004246.ref == ''databaseValueChanged'' ? ''custom-bdd'' : ''md-document''"></ion-icon>  {{ item.value != undefined ? item.value : item}} 
+      		<ion-icon item-start [name]="params1671128004246.ref == ''databaseValueChanged'' ? ''custom-bdd'' : ''md-document''"></ion-icon>
+      {{ item.value != undefined ? ((item.value.substring(0, 27) + (item.value.length >= 27 ? "..." : ""))) : (item.substring(0, 27) + (item.length >= 27 ? "..." : "")) }} 
           </span>
       	<delete-icon (click)="ngxTag.removeItem(item, index)"></delete-icon>
       </ng-template>'

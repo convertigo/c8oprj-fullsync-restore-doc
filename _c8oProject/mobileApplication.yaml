@@ -147,6 +147,25 @@ tplProjectName: mobilebuilder_tpl_7_9_0
           		margin-left: 5px !important;
           		padding-right: 0 !important;
           	}
+          }
+          .classNoSpaces2{
+          	background-color:transparent;
+          	padding-left:0 !important;
+          	ion-icon{
+          		margin-right: 0 !important;
+          		margin-top: 0 !important;
+          		margin-bottom: 0 !important;
+          	}
+          	.item-inner{
+          		margin-left: 5px !important;
+          		padding-right: 0 !important;
+          		max-height:19px !important;
+          	}
+          	ion-label{
+          		background-color:transparent;
+          		margin-top: 0 !important;
+          		margin-bottom: 0 !important;
+          	}
           }'
 ↓States [mobile.components.UIStyle-1670950069174]: 
   styleContent: 
